@@ -1,10 +1,10 @@
 # Multicode
 
-***An all-in-one command-line tool for using cryptography.***
+> **An all-in-one command-line tool for using cryptography.**
 
 ## Overview and features
 
-##### Multicode is a powerful, comprehensive command-line tool that centralizes a variety of cryptographic algorithms mainly based on PyCryptodome and Cryptography modules. There are plenty of options available to customise each algorithm, offering a variety of possibilities for the practical application of cryptography. The tool is designed to be clear and accessible while retaining its rich functionality.
+**Multicode is a powerful, comprehensive command-line tool that centralizes a variety of cryptographic algorithms mainly based on PyCryptodome and Cryptography modules. There are plenty of options available to customise each algorithm, offering a variety of possibilities for the practical application of cryptography. The tool is designed to be clear and accessible while retaining its rich functionality.**
 
 - **Encrypt and decrypt data** using symmetric or asymmetric, modern or legacy algorithms (`RSA`, `chacha20`, `AES`, and much more)
 - **Encode and decode text** in `base64`, `hexadecimal`, `base32`, and more.
@@ -39,18 +39,25 @@ Use the `python3 multicode.py` command to launch the utility.
 This command displays available commands and global options.
 ![help](images/help.png)
 
+
 Add `--help` with any command to see the specific options for a command.
 ![help](images/encrypt help.png)
+
 
 To see the algorithms available for a command, use the `--list` option.
 ![help](images/hash list.png)
 
+
 To view algorithm-specific options for adjusting its parameters,
 use the `--algo-help` command. For example `multicode encrypt aes --mode gcm --algo-help`.
+
 ![help](images/aes1.png)
 
+
 *Generate a 256-bit random binary string:*
+
 ![help](images/key1.png)
+
 
 Non-optional algorithm parameters, that are not specified in the command option are requested.
 Leave empty to generate a default value, the other possible values are specified.
@@ -59,6 +66,7 @@ Example: `Key (KEY/[128]/192/256):`
 - Enter `256` to generate a 256-bit key.
 - Enter a hexadecimal, base64 or base32 key to use your own key.
 ![help](images/aes3.png)
+
 
 *Encrypt “text” with the previously generated key and use the other default parameters:*
 ![help](images/aes2.png)
