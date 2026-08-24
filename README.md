@@ -1,6 +1,7 @@
 # Multicode
 
 > **An all-in-one command-line tool for using cryptography.**
+> **This is an old project I started when I was 15, after I became fascinated with cryptography; the code is poorly optimized in some places.**
 
 ## Overview and features
 
