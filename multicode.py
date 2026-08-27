@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# PYTHON_ARGCOMPLETE_OK
 
 """
 Multicode is a powerful yet user-friendly cryptography toolkit.
@@ -266,11 +265,13 @@ def main():
             args.command = ALIASES_CMD[args.command]
 
     if args.list:  # --list/-l option: list available algorithms for a command.
-        print(tabulate(LIST_ALGO[args.command], headers="keys"))
         if args.command == "encrypt" or args.command == "decrypt":
+            print(tabulate(LIST_ALGO["cipher"], headers="keys"))
             print("\nSome algorithms require a mode of operation because they are block ciphers."
                   "\nIn this case use --mode MODE. To know which modes are available for an algorithm,"
                   "\nuse the --list-modes option.")
+        else:
+            print(tabulate(LIST_ALGO[args.command], headers="keys"))
         sys.exit(1)
 
     if not args.algo and args.command != "key":  # ALGORITHME argument is not an option.
